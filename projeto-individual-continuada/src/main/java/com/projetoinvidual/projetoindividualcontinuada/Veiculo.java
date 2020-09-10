@@ -1,6 +1,6 @@
 package com.projetoinvidual.projetoindividualcontinuada;
 
-public abstract class  Veiculo {
+public abstract class  Veiculo implements ConverterTempo{
 
     private String nome;
     private Double valor;
@@ -14,7 +14,7 @@ public abstract class  Veiculo {
         this.tempo = tempo;
     }
 
-    public abstract Double velocidademedia ();
+    public abstract Double velocidadeMedia ();
 
     public String getNome() {
         return nome;

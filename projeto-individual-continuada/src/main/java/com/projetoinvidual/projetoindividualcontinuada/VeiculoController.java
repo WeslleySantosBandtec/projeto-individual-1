@@ -10,7 +10,7 @@ import java.util.List;
 //@RestController
 //@RequestMapping("/veiculos")
 
-public class CarroController {
+public class VeiculoController {
 
     private List<Carro> listaCarro = new ArrayList<>();
     private List<Moto> listaMoto = new ArrayList<>();

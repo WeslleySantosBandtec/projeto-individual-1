@@ -1,0 +1,27 @@
+{
+	"nome": "Ferrari 458",
+
+	"valor": 1000000000.00,
+
+	"distanciaPercorrida": 130.00,
+
+	"tempo": 1
+}
+
+
+{
+	"nome": "bis",
+
+	"valor": 100.00,
+
+	"distanciaPercorrida": 30.5,
+
+	"tempo": 60
+}
+
+{
+	"nome": "Bugatti Chirom",
+	"valor": 300000000.00,
+	"distanciaPercorrida": 1000.00,
+	"tempo": 20
+}

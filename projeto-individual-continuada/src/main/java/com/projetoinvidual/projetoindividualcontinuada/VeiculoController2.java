@@ -12,6 +12,7 @@ public class VeiculoController2 {
 
     List<Veiculo> listaVeiculos = new ArrayList<>();
 
+    // URL: veiculos/cadastrar/carros
     // cadastrar carro
     @PostMapping("/cadastrar/carros")
     public ResponseEntity cadastrarCarro(@RequestBody Carro carro1) {
@@ -19,6 +20,7 @@ public class VeiculoController2 {
         return ResponseEntity.created(null).build();
     }
 
+    // vaiculos/cadastrar/motos
     // cadastrar motos
     @PostMapping("/cadastrar/motos")
     public ResponseEntity cadastrarMoto(@RequestBody Moto moto1) {
@@ -26,6 +28,7 @@ public class VeiculoController2 {
         return ResponseEntity.created(null).build();
     }
 
+    // veiculos/mostrar/tudo
     // mostrar tudo
     @GetMapping("/mostrar/tudo")
     public ResponseEntity mostrar() {
@@ -36,6 +39,7 @@ public class VeiculoController2 {
         }
     }
 
+    // veiculos/mostrar/ {indice}
     // mostrar item especifico
     @GetMapping("/mostrar/{indice}")
     public ResponseEntity mostrarItem(@PathVariable Integer indice) {
@@ -46,16 +50,33 @@ public class VeiculoController2 {
         }
     }
 
+    // veiculos/deletar/{indice}
     // Deletar
     @DeleteMapping("/deletar/{indice}")
-    public ResponseEntity deletar (@PathVariable Integer indice) {
-        if (listaVeiculos.size() >= indice){
-            listaVeiculos.remove(indice -1);
+    public ResponseEntity deletar(@PathVariable Integer indice) {
+        if (listaVeiculos.size() >= indice) {
+            listaVeiculos.remove(indice - 1);
             return ResponseEntity.ok().build();
-        }else {
+        } else {
             return ResponseEntity.notFound().build();
         }
     }
+
+
+//    // veiculos/calcular/distancia/percorrida
+//    @GetMapping("/calcular/distancia/percorrida")
+//    public ResponseEntity mostrarDistancia() {
+////        Double acumulador = 0.0;
+////        if (!listaVeiculos.isEmpty()) {
+////            for (Veiculo v : listaVeiculos) {
+////                acumulador += v.getDistanciaPercorrida();
+////                return  ResponseEntity.ok(acumulador);
+////            }
+////        } else {
+////            return ResponseEntity.noContent().build();
+////        }
+////        return ResponseEntity.noContent().build();
+////    }
 
 
 }

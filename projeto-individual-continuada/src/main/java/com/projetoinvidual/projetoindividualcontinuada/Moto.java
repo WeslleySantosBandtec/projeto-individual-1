@@ -7,7 +7,12 @@ public class Moto extends Veiculo {
     }
 
     @Override
-    public Double velocidademedia() {
+    public Double converterTempo() {
+        return getTempo() / 60.0;
+    }
+
+    @Override
+    public Double velocidadeMedia() {
         return getTempo() / getDistanciaPercorrida();
     }
 }
